@@ -4,7 +4,23 @@ import os
 from .. import bot as Drone
 from telethon import events, Button
 
-from ethon.mystarts import start_srb
+from telethon import events, Button
+
+
+async def start_srb(event, st):
+    await event.reply(st, 
+                      buttons=[
+                              [Button.inline("SET THUMB.", data="set"),
+                               Button.inline("REM THUMB.", data="rem")],
+                              [Button.url("DEV", url="https://t.me/Soonbotmaker0")]])
+                              
+    
+async def vc_menu(event):
+    await event.edit("**VIDEO CONVERTOR v1.4**", 
+                    buttons=[
+                        [Button.inline("info.", data="info")],
+                        [Button.inline("Main.", data="help")],
+                        [Button.url("DEVELOPER", url="https://t.me/Soonbotmaker0")]])
     
 S = '/' + 's' + 't' + 'a' + 'r' + 't'
 
@@ -44,6 +60,6 @@ async def remt(event):
   
 @Drone.on(events.NewMessage(incoming=True, pattern=f"{S}"))
 async def start(event):
-    text = "Send me Link of any message to clone it here, For private channel message, send invite link first.\n\n**SUPPORT:** @TeamDrone"
+    text = "Send me Link of any message to clone it here, For private channel message, send invite link first.\n\n**SUPPORT:** @DKBOTZ"
     await start_srb(event, text)
     
