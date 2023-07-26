@@ -12,7 +12,7 @@ async def start_srb(event, st):
                       buttons=[
                               [Button.inline("SET THUMB.", data="set"),
                                Button.inline("REM THUMB.", data="rem")],
-                              [Button.url("DEV", url="https://t.me/Soonbotmaker0")]])
+                              [Button.url("DEV", url="https://t.me/Bot_update_i")]])
                               
     
 async def vc_menu(event):
@@ -60,6 +60,6 @@ async def remt(event):
   
 @Drone.on(events.NewMessage(incoming=True, pattern=f"{S}"))
 async def start(event):
-    text = "Send me Link of any message to clone it here, For private channel message, send invite link first.\n\n**SUPPORT:** @DKBOTZ"
+    text = "Send me Link of any message to clone it here, For private channel message, send invite link first.\n\n**SUPPORT:** @Bot_update_i"
     await start_srb(event, text)
     
